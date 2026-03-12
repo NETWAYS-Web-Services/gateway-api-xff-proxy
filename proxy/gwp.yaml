@@ -1,0 +1,10 @@
+apiVersion: gateway.kgateway.dev/v1alpha1
+kind: GatewayParameters
+metadata:
+  name: proxy-gwp
+  namespace: kgateway-system
+spec:
+  kube:
+    service:
+      extraAnnotations:
+        loadbalancer.openstack.org/proxy-protocol: "true"
